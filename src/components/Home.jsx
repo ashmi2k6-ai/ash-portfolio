@@ -89,7 +89,7 @@ const Home = ({ onNavigate }) => {
       <Greeting>
         Hello, I'm <span>Ashmi</span>
       </Greeting>
-      <p style={{ opacity: 0.8, fontSize: '1.2rem' }}>Frontend Developer & Designer</p>
+      <p style={{ opacity: 0.8, fontSize: '1.2rem' }}>AI&DS student at ACEW</p>
 
       <NavBar>
         {sections.filter(s => !s.hideFromNav).map((section, index) => (

@@ -4,6 +4,7 @@
   --neon-pink: #ff00ff;
   --neon-purple: #bd00ff;
   --neon-blue: #00eaff;
+  --neon-orange: #ff8c00;
   --dark-bg: #111111;
   --white: #ffffff;
   --fusion-gradient: linear-gradient(135deg, var(--neon-pink), var(--neon-purple), var(--neon-blue));

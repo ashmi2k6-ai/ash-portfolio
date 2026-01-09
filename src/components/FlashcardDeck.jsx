@@ -124,6 +124,7 @@ const FlashcardDeck = ({ initialSectionIndex = 0, onBackToHome }) => {
                         frontContent={sections[index].frontContent}
                         backContent={sections[index].backContent}
                         isFlippable={sections[index].isFlippable !== false}
+                        isStatic={sections[index].isStatic === true}
                     />
                 </motion.div>
             </AnimatePresence>

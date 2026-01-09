@@ -91,7 +91,7 @@ const CardBack = styled(CardFace)`
   }
 `;
 
-const Flashcard = ({ title, frontContent, backContent, isFlippable = true }) => {
+const Flashcard = ({ title, frontContent, backContent, isFlippable = true, isStatic = false }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -103,11 +103,11 @@ const Flashcard = ({ title, frontContent, backContent, isFlippable = true }) => 
     <CardContainer
       onClick={handleFlip}
       as={motion.div}
-      whileHover={!isFlippable ? { scale: 1.02 } : {}}
-      animate={!isFlippable ? {
+      whileHover={(!isFlippable && !isStatic) ? { scale: 1.02 } : {}}
+      animate={(!isFlippable && !isStatic) ? {
         boxShadow: ["0 0 20px rgba(189, 0, 255, 0.2)", "0 0 40px rgba(189, 0, 255, 0.4)", "0 0 20px rgba(189, 0, 255, 0.2)"]
       } : {}}
-      transition={!isFlippable ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
+      transition={(!isFlippable && !isStatic) ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
       style={{ cursor: isFlippable ? 'pointer' : 'default' }}
     >
       <CardInner
