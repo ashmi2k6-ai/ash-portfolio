@@ -34,6 +34,16 @@ const NavigationButton = styled.button`
     opacity: 1;
     color: var(--neon-purple);
   }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    ${props => props.left ? 'left: 10px;' : 'right: 10px;'}
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+    ${props => props.left ? 'left: 5px;' : 'right: 5px;'}
+  }
 `;
 
 const FlashcardDeck = ({ initialSectionIndex = 0, onBackToHome }) => {
@@ -124,7 +134,6 @@ const FlashcardDeck = ({ initialSectionIndex = 0, onBackToHome }) => {
                         frontContent={sections[index].frontContent}
                         backContent={sections[index].backContent}
                         isFlippable={sections[index].isFlippable !== false}
-                        isStatic={sections[index].isStatic === true}
                     />
                 </motion.div>
             </AnimatePresence>

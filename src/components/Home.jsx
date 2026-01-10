@@ -25,6 +25,14 @@ const Greeting = styled.h1`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const ProfileImage = styled.div`
@@ -38,6 +46,17 @@ const ProfileImage = styled.div`
   background-image: url('https://via.placeholder.com/150'); /* Replace with actual image logic or passed prop */
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const NavBar = styled.nav`
@@ -79,6 +98,16 @@ const NavItem = styled(motion.a)`
     background: var(--fusion-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
   }
 `;
 

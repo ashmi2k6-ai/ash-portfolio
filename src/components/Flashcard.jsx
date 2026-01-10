@@ -18,6 +18,21 @@ const CardInner = styled(motion.div)`
   height: 60vh;
   position: relative;
   transform-style: preserve-3d;
+
+  @media (max-width: 1024px) {
+    width: 85%;
+    height: 65vh;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 70vh;
+  }
+
+  @media (max-width: 480px) {
+    width: 95%;
+    height: 75vh;
+  }
 `;
 
 const CardFace = styled.div`
@@ -62,6 +77,14 @@ const CardFront = styled(CardFace)`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -77,6 +100,14 @@ const CardBack = styled(CardFace)`
     background: var(--fusion-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
   }
 
   p, li {
@@ -91,7 +122,7 @@ const CardBack = styled(CardFace)`
   }
 `;
 
-const Flashcard = ({ title, frontContent, backContent, isFlippable = true, isStatic = false }) => {
+const Flashcard = ({ title, frontContent, backContent, isFlippable = true }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -103,11 +134,11 @@ const Flashcard = ({ title, frontContent, backContent, isFlippable = true, isSta
     <CardContainer
       onClick={handleFlip}
       as={motion.div}
-      whileHover={(!isFlippable && !isStatic) ? { scale: 1.02 } : {}}
-      animate={(!isFlippable && !isStatic) ? {
+      whileHover={!isFlippable ? { scale: 1.02 } : {}}
+      animate={!isFlippable ? {
         boxShadow: ["0 0 20px rgba(189, 0, 255, 0.2)", "0 0 40px rgba(189, 0, 255, 0.4)", "0 0 20px rgba(189, 0, 255, 0.2)"]
       } : {}}
-      transition={(!isFlippable && !isStatic) ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
+      transition={!isFlippable ? { duration: 3, repeat: Infinity, ease: "easeInOut" } : {}}
       style={{ cursor: isFlippable ? 'pointer' : 'default' }}
     >
       <CardInner

@@ -28,40 +28,40 @@ export const sections = [
     title: 'Skills',
     frontContent: 'Skills',
     backContent: `
-      <div style="text-align: center;">
-        <h3 style="margin-bottom: 20px;">Technical Proficiency</h3>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem;">
-          <span style="padding: 0.8rem 1.5rem; border: 2px solid var(--neon-blue); border-radius: 12px; color: var(--neon-blue); font-weight: 600; background: rgba(0, 234, 255, 0.05);">React+Vite</span>
-          <span style="padding: 0.8rem 1.5rem; border: 2px solid var(--neon-pink); border-radius: 12px; color: var(--neon-pink); font-weight: 600; background: rgba(255, 0, 255, 0.05);">HTML</span>
-          <span style="padding: 0.8rem 1.5rem; border: 2px solid var(--neon-purple); border-radius: 12px; color: var(--neon-purple); font-weight: 600; background: rgba(189, 0, 255, 0.05);">CSS</span>
-          <span style="padding: 0.8rem 1.5rem; border: 2px solid var(--neon-orange); border-radius: 12px; color: var(--neon-orange); font-weight: 600; background: rgba(255, 140, 0, 0.05);">Python</span>
+      <div style="text-align: center; width: 100%;">
+        <h3>Technical Proficiency</h3>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+          <div style="padding: 1rem; border: 1px solid var(--neon-blue); border-radius: 10px; min-width: 120px;">React+Vite</div>
+          <div style="padding: 1rem; border: 1px solid var(--neon-pink); border-radius: 10px; min-width: 120px;">HTML</div>
+          <div style="padding: 1rem; border: 1px solid var(--neon-purple); border-radius: 10px; min-width: 120px;">CSS</div>
+          <div style="padding: 1rem; border: 1px solid var(--neon-orange); border-radius: 10px; min-width: 120px;">Python</div>
         </div>
       </div>
     `,
   },
   {
     id: 'strengths',
-    title: 'My Strengths',
+    title: 'Key Attributes',
     frontContent: 'My Strengths',
     backContent: `
-      <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 25px; box-sizing: border-box;">
-        <h3 style="text-align: center; margin-bottom: 20px; color: var(--dark-bg); font-weight: 800; font-size: 2.2rem; letter-spacing: 2px;">MY STRENGTHS</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; flex-grow: 1;">
-          <div style="background: rgba(255, 0, 255, 0.08); border: 4px solid #ff00ff; padding: 20px; border-radius: 15px; text-align: center; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 4px 15px rgba(255, 0, 255, 0.1);">
-            <strong style="color: #330033; display: block; font-size: 1.2rem; margin-bottom: 8px;">Quick Learner</strong>
-            <p style="font-size: 0.9rem; color: #440044; margin: 0; line-height: 1.4; font-weight: 500;">Rapidly grasping new concepts and modern technologies with ease.</p>
+      <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 1rem;">
+        <h3 style="margin-bottom: 1.5rem; text-align: center; color: #333;">Key Attributes</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 15px; height: 70%;">
+          <div style="background-color: #fff0f5; border: 2px solid #ff69b4; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: center;">
+            <strong style="color: #ff1493; font-size: 1rem;">Quick Learner</strong>
+            <p style="color: #442233; font-size: 0.85rem; margin: 4px 0 0;">Rapidly grasping new concepts and complex technologies with ease.</p>
           </div>
-          <div style="background: rgba(0, 234, 255, 0.08); border: 4px solid #00eaff; padding: 20px; border-radius: 15px; text-align: center; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 4px 15px rgba(0, 234, 255, 0.1);">
-            <strong style="color: #003333; display: block; font-size: 1.2rem; margin-bottom: 8px;">Quick Adapter</strong>
-            <p style="font-size: 0.9rem; color: #004444; margin: 0; line-height: 1.4; font-weight: 500;">Efficiently adjusting to evolving project needs and workflows.</p>
+          <div style="background-color: #f0f8ff; border: 2px solid #00bfff; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: center;">
+            <strong style="color: #00008b; font-size: 1rem;">Quick Adapter</strong>
+            <p style="color: #223344; font-size: 0.85rem; margin: 4px 0 0;">Seamlessly adjusting to evolving project requirements and tools.</p>
           </div>
-          <div style="background: rgba(189, 0, 255, 0.08); border: 4px solid #bd00ff; padding: 20px; border-radius: 15px; text-align: center; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 4px 15px rgba(189, 0, 255, 0.1);">
-            <strong style="color: #1a0033; display: block; font-size: 1.2rem; margin-bottom: 8px;">Versatile</strong>
-            <p style="font-size: 0.9rem; color: #220044; margin: 0; line-height: 1.4; font-weight: 500;">Highly capable across multiple tools and development environments.</p>
+          <div style="background-color: #f5f0ff; border: 2px solid #9370db; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: center;">
+            <strong style="color: #4b0082; font-size: 1rem;">Versatile</strong>
+            <p style="color: #332244; font-size: 0.85rem; margin: 4px 0 0;">Multi-talented approach to technical challenges and creative design.</p>
           </div>
-          <div style="background: rgba(255, 140, 0, 0.08); border: 4px solid #ff8c00; padding: 20px; border-radius: 15px; text-align: center; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 4px 15px rgba(255, 140, 0, 0.1);">
-            <strong style="color: #331a00; display: block; font-size: 1.2rem; margin-bottom: 8px;">Team Player</strong>
-            <p style="font-size: 0.9rem; color: #442200; margin: 0; line-height: 1.4; font-weight: 500;">Collaborating seamlessly to deliver high-quality collective results.</p>
+          <div style="background-color: #fffaf0; border: 2px solid #ff8c00; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: center;">
+            <strong style="color: #8b4513; font-size: 1rem;">Team Player</strong>
+            <p style="color: #443322; font-size: 0.85rem; margin: 4px 0 0;">Collaborating effectively to achieve shared goals and group success.</p>
           </div>
         </div>
       </div>
@@ -119,9 +119,9 @@ export const sections = [
       <div>
         <h3>Get In Touch</h3>
         <p>I'd love to connect and discuss opportunities.</p>
-        <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:ashmi2k6@gmail.com" style="color: inherit; text-decoration: underline;">ashmi2k6@gmail.com</a></p>
-        <p style="margin: 10px 0;"><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ashmi-868023342" target="_blank" style="color: inherit; text-decoration: underline;">linkedin.com/in/ashmi-868023342</a></p>
-        <p style="margin: 10px 0;"><strong>GitHub:</strong> <a href="https://github.com/ashmi2k6-ai" target="_blank" style="color: inherit; text-decoration: underline;">github.com/ashmi2k6-ai</a></p>
+        <p><strong>Email:</strong> <a href="mailto:ashmi2k6@gmail.com" style="color: inherit; text-decoration: underline;">ashmi2k6@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ashmi-868023342" target="_blank" style="color: inherit; text-decoration: underline;">linkedin.com/in/ashmi-868023342</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/ashmi2k6-ai" target="_blank" style="color: inherit; text-decoration: underline;">github.com/ashmi2k6-ai</a></p>
       </div>
     `,
   },
@@ -136,7 +136,6 @@ export const sections = [
       </div>
     `,
     isFlippable: false,
-    isStatic: true,
     hideFromNav: true
   }
 ];
