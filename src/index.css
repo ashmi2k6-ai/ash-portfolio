@@ -245,19 +245,21 @@ li strong {
     .strengths-modal,
     .strengths-container,
     [data-section="strengths"] {
-        width: 95vw !important;
-        max-width: 95vw !important;
+        width: 90vw !important;
+        /* Reduced width to help fit */
+        max-width: 90vw !important;
         height: auto !important;
         max-height: 85vh !important;
-        padding: 0.3rem !important;
-        /* Reduced to pull content left/center */
-        margin: 1rem auto !important;
+        padding: 0 !important;
+        /* Removed padding as requested */
+        margin: 1rem 0 !important;
+        /* Align left */
         overflow: hidden !important;
-        /* No scrolling allowed */
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
-        /* Vertically center content */
+        align-items: flex-start !important;
+        /* Align content to the left */
     }
 
     /* Keep 2x2 grid layout */
@@ -265,12 +267,12 @@ li strong {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         grid-template-rows: repeat(2, 1fr) !important;
-        gap: 0.4rem !important;
-        /* Reduced gap */
+        gap: 0.3rem !important;
+        /* Minimal gap */
         width: 100% !important;
         height: auto !important;
         justify-content: start !important;
-        /* Align left as requested */
+        /* Align left */
         align-content: center !important;
         align-items: center !important;
         margin: 0 !important;
@@ -280,12 +282,12 @@ li strong {
     /* Make cards MUCH smaller */
     .strength-card {
         width: 100% !important;
-        height: 140px !important;
-        /* Fixed small height */
-        max-height: 140px !important;
-        min-height: 140px !important;
-        padding: 0.4rem !important;
-        /* Reduced padding */
+        height: 125px !important;
+        /* Smaller height */
+        max-height: 125px !important;
+        min-height: 125px !important;
+        padding: 0.3rem !important;
+        /* Minimal padding */
         overflow: hidden !important;
         display: flex !important;
         flex-direction: column !important;
