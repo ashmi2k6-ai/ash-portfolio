@@ -18,7 +18,7 @@ export const sections = [
     backContent: `
       <div>
         <h3>My Journey</h3>
-        <p>From a clueless student to a curious builder.</p>
+        <p>From a clueless student to a curious beginner.</p>
         <p>My path wasn't always clear, but with guidance from professionals and a relentless drive to learn, I've transformed my curiosity into creation. I love the process of turning ideas into interactive reality on the web.</p>
       </div>
     `,
@@ -28,14 +28,15 @@ export const sections = [
     title: 'Skills',
     frontContent: 'Skills',
     backContent: `
-      <div style="text-align: center; width: 100%;">
-        <h3>Technical Proficiency</h3>
-        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
-          <div style="padding: 1rem; border: 1px solid var(--neon-blue); border-radius: 10px; min-width: 120px;">React+Vite</div>
-          <div style="padding: 1rem; border: 1px solid var(--neon-pink); border-radius: 10px; min-width: 120px;">HTML</div>
-          <div style="padding: 1rem; border: 1px solid var(--neon-purple); border-radius: 10px; min-width: 120px;">CSS</div>
-          <div style="padding: 1rem; border: 1px solid var(--neon-orange); border-radius: 10px; min-width: 120px;">Python</div>
+      <div class="skills-container">
+        <h3 class="skills-title">Technical Proficiency</h3>
+        <div class="skills-grid">
+          <div class="skill-pill neon-blue">React+Vite</div>
+          <div class="skill-pill neon-pink">HTML</div>
+          <div class="skill-pill neon-purple">CSS</div>
+          <div class="skill-pill neon-orange">Python</div>
         </div>
+        <p class="vibecoder-note">I’m a beginner exploring vibecoding, using intuition and experimentation to create small projects.<br/>Still learning, but excited to grow through hands‑on practice and curiosity.</p>
       </div>
     `,
   },
@@ -47,21 +48,21 @@ export const sections = [
       <div class="strengths-container">
         <h3 class="strengths-title">Strengths</h3>
         <div class="strengths-grid">
-          <div class="strength-card" style="background-color: #fff0f5; border-color: #ff69b4;">
-            <strong style="color: #ff1493;">Quick Learner</strong>
-            <p style="color: #442233;">Rapidly grasping new concepts and complex technologies with ease.</p>
+          <div class="strength-card learner">
+            <strong>Quick Learner</strong>
+            <p>Rapidly grasping new concepts and complex technologies with ease.</p>
           </div>
-          <div class="strength-card" style="background-color: #f0f8ff; border-color: #00bfff;">
-            <strong style="color: #00008b;">Quick Adapter</strong>
-            <p style="color: #223344;">Seamlessly adjusting to evolving project requirements and tools.</p>
+          <div class="strength-card adapter">
+            <strong>Quick Adapter</strong>
+            <p>Seamlessly adjusting to evolving project requirements and tools.</p>
           </div>
-          <div class="strength-card" style="background-color: #f5f0ff; border-color: #9370db;">
-            <strong style="color: #4b0082;">Versatile</strong>
-            <p style="color: #332244;">Multi-talented approach to technical challenges and creative design.</p>
+          <div class="strength-card versatile">
+            <strong>Versatile</strong>
+            <p>Multi-talented approach to technical challenges and creative design.</p>
           </div>
-          <div class="strength-card" style="background-color: #fffaf0; border-color: #ff8c00;">
-            <strong style="color: #8b4513;">Team Player</strong>
-            <p style="color: #443322;">Collaborating effectively to achieve shared goals and group success.</p>
+          <div class="strength-card player">
+            <strong>Team Player</strong>
+            <p>Collaborating effectively to achieve shared goals and group success.</p>
           </div>
         </div>
       </div>

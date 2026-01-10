@@ -21,17 +21,21 @@ const CardInner = styled(motion.div)`
 
   @media (max-width: 1024px) {
     width: 85%;
-    height: 65vh;
+    min-height: 65vh;
+    height: auto;
   }
 
   @media (max-width: 768px) {
     width: 90%;
-    height: 70vh;
+    min-height: 70vh;
+    height: auto;
+    margin: 2rem 0;
   }
 
   @media (max-width: 480px) {
     width: 95%;
-    height: 75vh;
+    min-height: 75vh;
+    height: auto;
   }
 `;
 
@@ -45,21 +49,9 @@ const CardFace = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1.2rem; /* Reduced from 2rem to prevent overflow */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  overflow-y: auto; /* Changed from hidden to auto to allow scrolling on mobile */
-
-  /* Custom Scrollbar for better aesthetics */
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: var(--fusion-gradient);
-    border-radius: 10px;
-  }
-  &::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-  }
+  overflow: visible !important;
 
   /* Neon Border Effect */
   &::before {
@@ -107,32 +99,25 @@ const CardBack = styled(CardFace)`
   text-align: center;
 
   h3 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.25rem;
     background: var(--fusion-gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     @media (max-width: 768px) {
       font-size: 1.8rem;
     }
-
-    @media (max-width: 480px) {
-      font-size: 1.5rem;
-    }
   }
 
   p, li {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
 
     @media (max-width: 768px) {
       font-size: 1rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 0.9rem;
     }
   }
 

@@ -1,158 +1,273 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
 :root {
-  --neon-pink: #ff00ff;
-  --neon-purple: #bd00ff;
-  --neon-blue: #00eaff;
-  --neon-orange: #ff8c00;
-  --dark-bg: #111111;
-  --white: #ffffff;
-  --fusion-gradient: linear-gradient(135deg, var(--neon-pink), var(--neon-purple), var(--neon-blue));
+    --neon-pink: #ff00ff;
+    --neon-purple: #bd00ff;
+    --neon-blue: #00eaff;
+    --neon-orange: #ff8c00;
+    --dark-bg: #111111;
+    --white: #ffffff;
+    --secondary-bg: #f8f9fa;
+    --fusion-gradient: linear-gradient(135deg, var(--neon-pink), var(--neon-purple), var(--neon-blue));
+    --border-radius: 12px;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+html,
 body {
-  font-family: 'Outfit', sans-serif;
-  background-color: var(--dark-bg);
-  color: var(--white);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* --- Layout Containment --- */
+.deck-container,
+.App {
+    overflow: visible !important;
 }
 
-/* Strengths Section Styles */
+/* --- Typography (Global - Restored Size) --- */
+h3 {
+    font-size: 2.2rem;
+    /* Restored from 1.6rem */
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    background: var(--fusion-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.15rem;
+    /* Restored from 0.9rem */
+}
+
+/* --- Targeted Optimization (Small Fonts ONLY where needed) --- */
+
+/* 1. Technical Proficiency / Skills Area */
+.skills-container {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.skills-container h3 {
+    font-size: 1.8rem;
+    /* Keeps skills title slightly smaller to fit pills */
+    margin-bottom: 0.8rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.skill-pill {
+    padding: 0.5rem 1.4rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1.5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.skill-pill.neon-blue {
+    border-color: var(--neon-blue);
+    color: var(--neon-blue);
+}
+
+.skill-pill.neon-pink {
+    border-color: var(--neon-pink);
+    color: var(--neon-pink);
+}
+
+.skill-pill.neon-purple {
+    border-color: var(--neon-purple);
+    color: var(--neon-purple);
+}
+
+.skill-pill.neon-orange {
+    border-color: var(--neon-orange);
+    color: var(--neon-orange);
+}
+
+.vibecoder-note {
+    font-size: 1rem !important;
+    margin-top: 0.8rem;
+    opacity: 0.9;
+    max-width: 95%;
+}
+
+/* 2. Strengths Section */
 .strengths-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  overflow: hidden;
+    padding: 0.5rem;
 }
 
-.strengths-title {
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: #333;
+.strengths-container h3 {
+    font-size: 1.8rem;
+    /* Keeps strengths title compact */
+    margin-bottom: 0.8rem;
 }
 
 .strengths-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  height: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
 }
 
 .strength-card {
-  border: 2px solid transparent;
-  /* Border color set via inline style */
-  border-radius: 8px;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+    height: 170px;
+    /* Slight increase from 160px for better text balance */
+    max-height: 170px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: var(--border-radius);
+    border: 1.5px solid transparent;
 }
 
 .strength-card strong {
-  font-size: 1rem;
-  display: block;
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
 }
 
 .strength-card p {
-  font-size: 0.85rem;
-  margin: 4px 0 0;
-  line-height: 1.4;
+    font-size: 0.85rem !important;
+    /* Forces smaller text in these specific grid cards */
+    line-height: 1.3;
 }
 
-/* Tablet */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .strengths-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-
-  .strength-card {
-    padding: 1.5rem;
-  }
-
-  .strengths-container {
-    max-width: 90%;
-    margin: 0 auto;
-  }
+.learner {
+    background-color: #fff0f5;
+    border-color: #ff69b4;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .strengths-grid {
-    grid-template-columns: 1fr;
-    /* Single column */
-    gap: 1rem;
-    padding: 1rem;
-    height: auto;
-    overflow-y: auto;
-  }
+.learner strong {
+    color: #ff1493;
+}
 
-  .strengths-container {
+.adapter {
+    background-color: #f0f8ff;
+    border-color: #00bfff;
+}
+
+.adapter strong {
+    color: #00008b;
+}
+
+.versatile {
+    background-color: #f5f0ff;
+    border-color: #9370db;
+}
+
+.versatile strong {
+    color: #4b0082;
+}
+
+.player {
+    background-color: #fffaf0;
+    border-color: #ff8c00;
+}
+
+.player strong {
+    color: #8b4513;
+}
+
+/* --- Lists (Restored Size) --- */
+ul {
+    list-style: none;
+    text-align: left;
     max-width: 95%;
-    width: 100%;
     margin: 0 auto;
-    padding: 1.5rem 1rem;
-    justify-content: flex-start;
-  }
-
-  .strength-card {
-    padding: 1.2rem;
-    min-height: auto;
-  }
-
-  .strength-card strong {
-    font-size: 1.2rem;
-  }
-
-  .strength-card p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
 }
 
-/* Small Mobile */
-@media (max-width: 480px) {
-  .strengths-container {
-    padding: 1rem 0.5rem;
-  }
+li {
+    margin-bottom: 0.75rem !important;
+    padding-left: 1.5rem !important;
+    position: relative;
+    font-size: 1.1rem !important;
+    /* Restored from 0.9rem */
+}
 
-  .strength-card {
-    padding: 1rem;
-  }
+li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--neon-purple);
+    font-weight: 800;
+}
 
-  .strength-card strong {
-    font-size: 1.1rem;
-  }
+li strong {
+    font-size: 1.15rem !important;
+    color: #111 !important;
+}
 
-  .strength-card p {
-    font-size: 0.85rem;
-  }
+/* --- Global Utilities --- */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
 
-  /* Scale background effects */
-  svg {
-    max-width: 60vw;
-    height: auto;
-  }
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.8rem;
+    }
 
-  /* Nav menu gap adjustment */
-  nav {
-    gap: 1rem !important;
-  }
+    p {
+        font-size: 1rem;
+    }
+
+    li {
+        font-size: 0.95rem !important;
+    }
+
+    .strengths-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem;
+    }
+
+    .strength-card {
+        height: 150px;
+        max-height: 150px;
+    }
+}
+
+/* --- Background Containment --- */
+svg,
+canvas,
+.background-animations {
+    max-width: 100vw;
+    overflow: hidden !important;
+}
+
+/* --- Close Button --- */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid var(--neon-purple);
+    z-index: 1000;
+    cursor: pointer;
 }

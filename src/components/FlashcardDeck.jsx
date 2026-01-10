@@ -13,7 +13,8 @@ const DeckContainer = styled.div`
   align-items: center;
   position: relative;
   /* background-color: var(--dark-bg); Removed for transparency */
-  overflow: hidden;
+  overflow: visible !important;
+  overflow-x: hidden !important;
 `;
 
 const NavigationButton = styled.button`
@@ -143,6 +144,7 @@ const FlashcardDeck = ({ initialSectionIndex = 0, onBackToHome }) => {
             </NavigationButton>
 
             <NavigationButton
+                className="close-button"
                 style={{
                     top: '40px',
                     right: '40px',
