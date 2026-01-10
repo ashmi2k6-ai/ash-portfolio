@@ -249,13 +249,15 @@ li strong {
         max-width: 95vw !important;
         height: auto !important;
         max-height: 85vh !important;
-        padding: 1rem 0.8rem !important;
+        padding: 0.5rem 0.2rem 0.5rem 1.8rem !important;
+        /* Shift content RIGHT */
         margin: 1rem auto !important;
         overflow: hidden !important;
         /* No scrolling allowed */
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
+        /* Vertically center content */
     }
 
     /* Keep 2x2 grid layout */
@@ -263,12 +265,14 @@ li strong {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         grid-template-rows: repeat(2, 1fr) !important;
-        gap: 0.6rem !important;
+        gap: 0.5rem !important;
+        /* Reduced gap */
         width: 100% !important;
         height: auto !important;
         justify-content: center !important;
         /* Align boxes to center */
         align-content: center !important;
+        align-items: center !important;
     }
 
     /* Make cards MUCH smaller */
@@ -278,7 +282,8 @@ li strong {
         /* Fixed small height */
         max-height: 140px !important;
         min-height: 140px !important;
-        padding: 0.7rem 0.5rem !important;
+        padding: 0.5rem !important;
+        /* Reduced padding */
         overflow: hidden !important;
         display: flex !important;
         flex-direction: column !important;
