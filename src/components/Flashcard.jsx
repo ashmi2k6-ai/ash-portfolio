@@ -47,7 +47,19 @@ const CardFace = styled.div`
   align-items: center;
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  overflow-y: auto; /* Changed from hidden to auto to allow scrolling on mobile */
+
+  /* Custom Scrollbar for better aesthetics */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--fusion-gradient);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
 
   /* Neon Border Effect */
   &::before {
@@ -114,6 +126,14 @@ const CardBack = styled(CardFace)`
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
   }
 
   /* Render HTML content safely */

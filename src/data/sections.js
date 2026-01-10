@@ -41,27 +41,27 @@ export const sections = [
   },
   {
     id: 'strengths',
-    title: 'Key Attributes',
+    title: 'Strengths',
     frontContent: 'My Strengths',
     backContent: `
-      <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 1rem;">
-        <h3 style="margin-bottom: 1.5rem; text-align: center; color: #333;">Key Attributes</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 15px; height: 70%;">
-          <div style="background-color: #fff0f5; border: 2px solid #ff69b4; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: center;">
-            <strong style="color: #ff1493; font-size: 1rem;">Quick Learner</strong>
-            <p style="color: #442233; font-size: 0.85rem; margin: 4px 0 0;">Rapidly grasping new concepts and complex technologies with ease.</p>
+      <div class="strengths-container">
+        <h3 class="strengths-title">Strengths</h3>
+        <div class="strengths-grid">
+          <div class="strength-card" style="background-color: #fff0f5; border-color: #ff69b4;">
+            <strong style="color: #ff1493;">Quick Learner</strong>
+            <p style="color: #442233;">Rapidly grasping new concepts and complex technologies with ease.</p>
           </div>
-          <div style="background-color: #f0f8ff; border: 2px solid #00bfff; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: center;">
-            <strong style="color: #00008b; font-size: 1rem;">Quick Adapter</strong>
-            <p style="color: #223344; font-size: 0.85rem; margin: 4px 0 0;">Seamlessly adjusting to evolving project requirements and tools.</p>
+          <div class="strength-card" style="background-color: #f0f8ff; border-color: #00bfff;">
+            <strong style="color: #00008b;">Quick Adapter</strong>
+            <p style="color: #223344;">Seamlessly adjusting to evolving project requirements and tools.</p>
           </div>
-          <div style="background-color: #f5f0ff; border: 2px solid #9370db; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: center;">
-            <strong style="color: #4b0082; font-size: 1rem;">Versatile</strong>
-            <p style="color: #332244; font-size: 0.85rem; margin: 4px 0 0;">Multi-talented approach to technical challenges and creative design.</p>
+          <div class="strength-card" style="background-color: #f5f0ff; border-color: #9370db;">
+            <strong style="color: #4b0082;">Versatile</strong>
+            <p style="color: #332244;">Multi-talented approach to technical challenges and creative design.</p>
           </div>
-          <div style="background-color: #fffaf0; border: 2px solid #ff8c00; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; justify-content: center;">
-            <strong style="color: #8b4513; font-size: 1rem;">Team Player</strong>
-            <p style="color: #443322; font-size: 0.85rem; margin: 4px 0 0;">Collaborating effectively to achieve shared goals and group success.</p>
+          <div class="strength-card" style="background-color: #fffaf0; border-color: #ff8c00;">
+            <strong style="color: #8b4513;">Team Player</strong>
+            <p style="color: #443322;">Collaborating effectively to achieve shared goals and group success.</p>
           </div>
         </div>
       </div>
