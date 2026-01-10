@@ -249,7 +249,7 @@ li strong {
         max-width: 95vw !important;
         height: auto !important;
         max-height: 85vh !important;
-        padding: 0.5rem !important;
+        padding: 0.3rem !important;
         /* Reduced to pull content left/center */
         margin: 1rem auto !important;
         overflow: hidden !important;
@@ -265,7 +265,7 @@ li strong {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
         grid-template-rows: repeat(2, 1fr) !important;
-        gap: 0.5rem !important;
+        gap: 0.4rem !important;
         /* Reduced gap */
         width: 100% !important;
         height: auto !important;
@@ -273,7 +273,7 @@ li strong {
         /* Align left as requested */
         align-content: center !important;
         align-items: center !important;
-        margin: 0 auto !important;
+        margin: 0 !important;
         padding: 0 !important;
     }
 
