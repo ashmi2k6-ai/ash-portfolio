@@ -66,6 +66,8 @@ p {
     font-size: 1.8rem;
     /* Keeps skills title slightly smaller to fit pills */
     margin-bottom: 0.8rem;
+    margin-top: 1.5rem;
+    /* Prevent touching top border */
 }
 
 .skills-grid {
@@ -261,6 +263,9 @@ li strong {
         gap: 0.6rem !important;
         width: 100% !important;
         height: auto !important;
+        justify-content: center !important;
+        /* Align boxes to center */
+        align-content: center !important;
     }
 
     /* Make cards MUCH smaller */
