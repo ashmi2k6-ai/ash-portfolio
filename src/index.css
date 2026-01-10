@@ -249,8 +249,8 @@ li strong {
         max-width: 95vw !important;
         height: auto !important;
         max-height: 85vh !important;
-        padding: 0.5rem 0.2rem 0.5rem 1.8rem !important;
-        /* Shift content RIGHT */
+        padding: 0.5rem !important;
+        /* Reduced to pull content left/center */
         margin: 1rem auto !important;
         overflow: hidden !important;
         /* No scrolling allowed */
@@ -269,10 +269,12 @@ li strong {
         /* Reduced gap */
         width: 100% !important;
         height: auto !important;
-        justify-content: center !important;
-        /* Align boxes to center */
+        justify-content: start !important;
+        /* Align left as requested */
         align-content: center !important;
         align-items: center !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
     }
 
     /* Make cards MUCH smaller */
@@ -282,7 +284,7 @@ li strong {
         /* Fixed small height */
         max-height: 140px !important;
         min-height: 140px !important;
-        padding: 0.5rem !important;
+        padding: 0.4rem !important;
         /* Reduced padding */
         overflow: hidden !important;
         display: flex !important;
