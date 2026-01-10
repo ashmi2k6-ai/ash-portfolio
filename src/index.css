@@ -75,7 +75,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.75rem;
-    margin: 1rem 0;
+    margin: 0.2rem 0;
 }
 
 .skill-pill {
@@ -110,7 +110,7 @@ p {
 
 .vibecoder-note {
     font-size: 1rem !important;
-    margin-top: 0.8rem;
+    margin-top: 0.2rem;
     opacity: 0.9;
     max-width: 95%;
 }
@@ -253,6 +253,9 @@ li strong {
         margin: 1rem auto !important;
         overflow: hidden !important;
         /* No scrolling allowed */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
 
     /* Keep 2x2 grid layout */
@@ -287,7 +290,7 @@ li strong {
     .strengths-modal h1,
     .strengths-modal h2,
     .strengths-title {
-        font-size: 1.3rem !important;
+        font-size: 1.6rem !important;
         margin-bottom: 0.8rem !important;
         margin-top: 0 !important;
     }
