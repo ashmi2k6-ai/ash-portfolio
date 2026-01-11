@@ -241,96 +241,104 @@ li strong {
         font-size: 0.95rem !important;
     }
 
-    /* Strengths modal - fit screen with NO overflow */
+    /* Strengths modal container */
     .strengths-modal,
     .strengths-container,
     [data-section="strengths"] {
-        width: 90vw !important;
-        /* Reduced width to help fit */
-        max-width: 90vw !important;
+        width: 95vw !important;
+        max-width: 95vw !important;
+        padding: 1.2rem 0.8rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        overflow: hidden !important;
         height: auto !important;
         max-height: 85vh !important;
-        padding: 0 !important;
-        /* Removed padding as requested */
-        margin: 1rem 0 !important;
-        /* Align left */
-        overflow: hidden !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: flex-start !important;
-        /* Align content to the left */
     }
 
-    /* Keep 2x2 grid layout */
-    .strengths-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-template-rows: repeat(2, 1fr) !important;
-        gap: 0.3rem !important;
-        /* Minimal gap */
-        width: 100% !important;
-        height: auto !important;
-        justify-content: start !important;
-        /* Align left */
-        align-content: center !important;
-        align-items: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* Make cards MUCH smaller */
-    .strength-card {
-        width: 100% !important;
-        height: 125px !important;
-        /* Smaller height */
-        max-height: 125px !important;
-        min-height: 125px !important;
-        padding: 0.3rem !important;
-        /* Minimal padding */
-        overflow: hidden !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        margin: 0 !important;
-    }
-
-    /* Strengths title - smaller */
+    /* Strengths title - top center */
     .strengths-modal h1,
     .strengths-modal h2,
     .strengths-title {
-        font-size: 1.6rem !important;
-        margin-bottom: 0.8rem !important;
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 auto 1rem auto !important;
+        padding: 0 !important;
         margin-top: 0 !important;
     }
 
-    /* Card titles - smaller */
+    /* Grid container - align left to appear centered */
+    .strengths-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.7rem !important;
+        width: 92% !important;
+        /* Slightly narrower */
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        justify-content: center !important;
+    }
+
+    /* Individual cards - slightly smaller */
+    .strength-card {
+        width: 100% !important;
+        height: 150px !important;
+        max-height: 150px !important;
+        padding: 0.8rem 0.6rem !important;
+        border-radius: 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    /* Card titles */
     .strength-card h3 {
-        font-size: 0.95rem !important;
-        margin-bottom: 0.4rem !important;
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
         line-height: 1.2 !important;
     }
 
-    /* Card description text - smaller */
+    /* Card text */
     .strength-card p {
-        font-size: 0.75rem !important;
-        line-height: 1.3 !important;
+        font-size: 0.8rem !important;
+        line-height: 1.35 !important;
         margin: 0 !important;
     }
 }
 
-/* Extra small phones */
+/* Smaller phones */
 @media (max-width: 480px) {
-    .strengths-modal {
-        padding: 0.8rem 0.6rem !important;
-        width: 98vw !important;
+    .strengths-grid {
+        width: 94% !important;
+        gap: 0.6rem !important;
+    }
+
+    .strength-card {
+        height: 140px !important;
+        padding: 0.7rem 0.5rem !important;
+    }
+
+    .strength-card h3 {
+        font-size: 0.95rem !important;
+    }
+
+    .strength-card p {
+        font-size: 0.75rem !important;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 375px) {
+    .strengths-grid {
+        width: 96% !important;
+        gap: 0.5rem !important;
     }
 
     .strength-card {
         height: 130px !important;
-        max-height: 130px !important;
         padding: 0.6rem 0.4rem !important;
-        min-height: 130px !important;
     }
 
     .strength-card h3 {
@@ -338,30 +346,7 @@ li strong {
     }
 
     .strength-card p {
-        font-size: 0.7rem !important;
-    }
-
-    .strengths-grid {
-        gap: 0.5rem !important;
-    }
-}
-
-/* Very small phones */
-@media (max-width: 375px) {
-    .strength-card {
-        height: 120px !important;
-        max-height: 120px !important;
-        padding: 0.5rem 0.3rem !important;
-    }
-
-    .strength-card h3 {
-        font-size: 0.85rem !important;
-        margin-bottom: 0.3rem !important;
-    }
-
-    .strength-card p {
-        font-size: 0.65rem !important;
-        line-height: 1.25 !important;
+        font-size: 0.72rem !important;
     }
 }
 
