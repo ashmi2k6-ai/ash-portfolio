@@ -48,21 +48,25 @@ export const sections = [
       <div class="strengths-container">
         <h3 class="strengths-title">Strengths</h3>
         <div class="strengths-grid">
-          <div class="strength-card learner">
-            <strong>Quick Learner</strong>
-            <p>Rapidly grasping new concepts and complex technologies with ease.</p>
+          <div class="strength-row-group">
+            <div class="strength-card learner">
+              <strong>Quick Learner</strong>
+              <p>Rapidly grasping new concepts and complex technologies with ease.</p>
+            </div>
+            <div class="strength-card adapter">
+              <strong>Quick Adapter</strong>
+              <p>Seamlessly adjusting to evolving project requirements and tools.</p>
+            </div>
           </div>
-          <div class="strength-card adapter">
-            <strong>Quick Adapter</strong>
-            <p>Seamlessly adjusting to evolving project requirements and tools.</p>
-          </div>
-          <div class="strength-card versatile">
-            <strong>Versatile</strong>
-            <p>Multi-talented approach to technical challenges and creative design.</p>
-          </div>
-          <div class="strength-card player">
-            <strong>Team Player</strong>
-            <p>Collaborating effectively to achieve shared goals and group success.</p>
+          <div class="strength-row-group">
+            <div class="strength-card versatile">
+              <strong>Versatile</strong>
+              <p>Multi-talented approach to technical challenges and creative design.</p>
+            </div>
+            <div class="strength-card player">
+              <strong>Team Player</strong>
+              <p>Collaborating effectively to achieve shared goals and group success.</p>
+            </div>
           </div>
         </div>
       </div>

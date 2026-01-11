@@ -132,6 +132,11 @@ p {
     gap: 0.8rem;
 }
 
+/* NEW: Desktop behavior - make wrappers transparent to grid */
+.strength-row-group {
+    display: contents;
+}
+
 .strength-card {
     height: 170px;
     /* Slight increase from 160px for better text balance */
@@ -268,35 +273,46 @@ li strong {
         margin-top: 0 !important;
     }
 
-    /* Grid container - FLEXBOX for absolute centering */
+    /* Grid container - FLEX PARENT column */
     .strengths-grid {
         display: flex !important;
-        flex-wrap: wrap !important;
+        flex-direction: column !important;
+        /* Parent align items in column */
         justify-content: center !important;
         align-items: center !important;
-        gap: 1rem !important;
+        gap: 0.8rem !important;
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto !important;
         padding: 0 !important;
     }
 
+    /* Group wrappers - FLEX CHILD rows */
+    .strength-row-group {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+        width: 100% !important;
+    }
+
     /* Individual cards - compact and centered */
     .strength-card {
-        width: 140px !important;
+        width: 155px !important;
         /* Fixed width to ensure centering */
-        height: 140px !important;
+        height: 155px !important;
         /* Square aspect ratio */
-        max-height: 140px !important;
-        padding: 0.8rem 0.5rem !important;
+        max-height: 155px !important;
+        padding: 0.8rem 0.6rem !important;
         border-radius: 15px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
         align-items: center !important;
         /* Center text inside */
-        margin: 0 auto !important;
-        /* Ensure card itself is centered in grid cell */
+        margin: 0 !important;
+        /* Remove auto margin since flex handles it */
     }
 
     /* Card titles */
@@ -316,16 +332,20 @@ li strong {
 
 /* Smaller phones */
 @media (max-width: 480px) {
+
+    /* Group wrappers - slightly tighter gap */
+    .strength-row-group {
+        gap: 0.6rem !important;
+    }
+
     .strengths-grid {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        width: 100% !important;
         gap: 0.6rem !important;
     }
 
     .strength-card {
-        height: 140px !important;
+        width: 145px !important;
+        height: 145px !important;
+        max-height: 145px !important;
         padding: 0.7rem 0.5rem !important;
     }
 
@@ -340,15 +360,19 @@ li strong {
 
 /* Very small phones */
 @media (max-width: 375px) {
+
+    /* Tighter gaps */
+    .strength-row-group {
+        gap: 0.5rem !important;
+    }
+
     .strengths-grid {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
         gap: 0.5rem !important;
     }
 
     .strength-card {
-        height: 130px !important;
+        width: 135px !important;
+        height: 135px !important;
         padding: 0.6rem 0.4rem !important;
     }
 
