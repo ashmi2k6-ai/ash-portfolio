@@ -268,31 +268,38 @@ li strong {
         margin-top: 0 !important;
     }
 
-    /* Grid container - centered with equal padding */
+    /* Grid container - strictly centered and compacted */
     .strengths-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.8rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
+        gap: 1rem !important;
+        /* Increased gap slightly for separation */
+        width: auto !important;
+        max-width: 380px !important;
+        /* Forces cards towards center */
         margin: 0 auto !important;
-        padding: 0 1rem !important;
-        box-sizing: border-box !important;
-        justify-items: center !important;
+        padding: 0 !important;
+        /* Remove padding as max-width handles centering */
         justify-content: center !important;
+        align-content: center !important;
     }
 
-    /* Individual cards - larger and properly sized */
+    /* Individual cards - compact and centered */
     .strength-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 160px !important;
-        max-height: 160px !important;
-        padding: 1rem 0.8rem !important;
+        width: 140px !important;
+        /* Fixed width to ensure centering */
+        height: 140px !important;
+        /* Square aspect ratio */
+        max-height: 140px !important;
+        padding: 0.8rem 0.5rem !important;
         border-radius: 15px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
+        align-items: center !important;
+        /* Center text inside */
+        margin: 0 auto !important;
+        /* Ensure card itself is centered in grid cell */
     }
 
     /* Card titles */
@@ -313,7 +320,8 @@ li strong {
 /* Smaller phones */
 @media (max-width: 480px) {
     .strengths-grid {
-        width: 94% !important;
+        width: auto !important;
+        max-width: 96vw !important;
         gap: 0.6rem !important;
     }
 
@@ -334,7 +342,8 @@ li strong {
 /* Very small phones */
 @media (max-width: 375px) {
     .strengths-grid {
-        width: 96% !important;
+        width: auto !important;
+        max-width: 96vw !important;
         gap: 0.5rem !important;
     }
 
