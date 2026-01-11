@@ -120,15 +120,67 @@ export const sections = [
     id: 'contact',
     title: 'Contact',
     frontContent: 'Contact',
-    backContent: `
-      <div>
+    backContent: (
+      <div className="contact-card">
         <h3>Get In Touch</h3>
         <p>I'd love to connect and discuss opportunities.</p>
-        <p><strong>Email:</strong> <a href="mailto:ashmi2k6@gmail.com" style="color: inherit; text-decoration: underline;">ashmi2k6@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ashmi-868023342" target="_blank" style="color: inherit; text-decoration: underline;">linkedin.com/in/ashmi-868023342</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/ashmi2k6-ai" target="_blank" style="color: inherit; text-decoration: underline;">github.com/ashmi2k6-ai</a></p>
+
+        <p>
+          <strong>Email:</strong>{' '}
+          <a
+            href="mailto:ashmi2k6@gmail.com"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              color: '#87CEEB',
+              textDecoration: 'underline',
+              cursor: 'pointer',
+              position: 'relative',
+              zIndex: 10
+            }}
+          >
+            ashmi2k6@gmail.com
+          </a>
+        </p>
+
+        <p>
+          <strong>LinkedIn:</strong>{' '}
+          <a
+            href="https://linkedin.com/in/ashmi-868023342"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              color: '#87CEEB',
+              textDecoration: 'underline',
+              cursor: 'pointer',
+              position: 'relative',
+              zIndex: 10
+            }}
+          >
+            linkedin.com/in/ashmi-868023342
+          </a>
+        </p>
+
+        <p>
+          <strong>GitHub:</strong>{' '}
+          <a
+            href="https://github.com/ashmi2k6-ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              color: '#87CEEB',
+              textDecoration: 'underline',
+              cursor: 'pointer',
+              position: 'relative',
+              zIndex: 10
+            }}
+          >
+            github.com/ashmi2k6-ai
+          </a>
+        </p>
       </div>
-    `,
+    ),
   },
   {
     id: 'thankyou',

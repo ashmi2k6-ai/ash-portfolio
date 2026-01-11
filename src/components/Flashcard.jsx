@@ -130,7 +130,26 @@ const CardBack = styled(CardFace)`
 const Flashcard = ({ title, frontContent, backContent, isFlippable = true }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const handleFlip = () => {
+  const handleFlip = (e) => {
+    // Check if clicked element is a link or inside a link
+    const link = e.target.tagName === 'A' ? e.target : e.target.closest('a');
+
+    if (link) {
+      e.stopPropagation(); // Stop event bubbling
+      const href = link.getAttribute('href');
+      const target = link.getAttribute('target');
+
+      if (href) {
+        // Manually navigate
+        if (target === '_blank') {
+          window.open(href, '_blank', 'noopener,noreferrer');
+        } else {
+          window.location.href = href;
+        }
+      }
+      return;
+    }
+
     if (!isFlippable) return;
     setIsFlipped(!isFlipped);
   };
@@ -162,13 +181,22 @@ const Flashcard = ({ title, frontContent, backContent, isFlippable = true }) => 
                 width: '100%',
                 textAlign: 'center'
               }}
-              dangerouslySetInnerHTML={{ __html: backContent }}
-            />
+            >
+              {typeof backContent === 'string' ? (
+                <div dangerouslySetInnerHTML={{ __html: backContent }} />
+              ) : (
+                backContent
+              )}
+            </div>
           )}
         </CardFront>
         {isFlippable && (
           <CardBack>
-            <div dangerouslySetInnerHTML={{ __html: backContent }} />
+            {typeof backContent === 'string' ? (
+              <div dangerouslySetInnerHTML={{ __html: backContent }} />
+            ) : (
+              backContent
+            )}
           </CardBack>
         )}
       </CardInner>

@@ -277,14 +277,17 @@ li strong {
     .strengths-grid {
         display: flex !important;
         flex-direction: column !important;
-        /* Parent align items in column */
         justify-content: center !important;
         align-items: center !important;
         gap: 0.8rem !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
+        margin: 0 !important;
+        /* Reset auto margin */
+        padding-right: 1.5rem !important;
+        /* Add padding right to push content left */
+        transform: translateX(-0.5rem);
+        /* Nudge slightly more left */
     }
 
     /* Group wrappers - FLEX CHILD rows */
@@ -340,6 +343,9 @@ li strong {
 
     .strengths-grid {
         gap: 0.6rem !important;
+        padding-right: 1rem !important;
+        /* Slightly less shift for smaller screens */
+        transform: translateX(-0.3rem);
     }
 
     .strength-card {
@@ -368,6 +374,8 @@ li strong {
 
     .strengths-grid {
         gap: 0.5rem !important;
+        padding-right: 0.8rem !important;
+        transform: translateX(-0.2rem);
     }
 
     .strength-card {

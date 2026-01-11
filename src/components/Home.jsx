@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { sections } from '../data/sections';
+import { sections } from '../data/sections.jsx';
 
 const HomeContainer = styled.div`
   width: 100vw;

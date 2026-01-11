@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
-import { sections } from '../data/sections';
+import { sections } from '../data/sections.jsx';
 import Flashcard from './Flashcard';
 import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 
